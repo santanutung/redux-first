@@ -9,10 +9,14 @@ const Cart = (props) => {
 
     return (
         <div className="cart col-md-4">
-            <h4>cart {cart.length}</h4>
-            <ul>
-                {cart.map(id => <li > {id}<button onClick={() => RemoveFromCart(id)}>X</button></li>)}
-            </ul>
+            <h4>cart {
+                cart.length
+            }</h4>
+           <ul>
+                {
+                    cart.map(cart => <li key={cart.cartId} > {cart.name}<button onClick={() => RemoveFromCart(cart.cartId)}>X</button></li>) 
+            }
+           </ul>
 
         </div>
     );

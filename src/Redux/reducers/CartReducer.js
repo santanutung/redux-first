@@ -15,13 +15,25 @@ const CartReducer = (state = initialState, action) => {
         case ADD_TO_CART:
             console.log(action);
 
+            const newItem ={
+                productId: action.id,
+                name: action.name,
+                cartId: state.cart.length+1
+            };
+
             return {
                 ...state,
-                cart: [...state.cart, action.id],
+                cart: [
+                    ...state.cart,
+                    newItem
+        
+                ],
             }
         case REMOVE_From_CART:
-            const id = action.id
-            const remaingCart = state.cart.filter(item => item !== id)
+            console.log(action);
+            
+            const cartId = action.cartId
+            const remaingCart = state.cart.filter(item => item.cartId !== cartId)
             return {
                 ...state,
                 cart: remaingCart,
