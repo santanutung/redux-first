@@ -5,17 +5,11 @@ import Product from '../Product/Product';
 
 const Shop = (props) => {
     console.log(props);
-    const product = [
-        { name: 'lanovo laptop', id: 1 },
-        { name: 'asush laptop', id: 2 },
-        { name: 'hp laptop', id: 3 },
-        { name: 'Tosiva laptop', id: 4 },
-        { name: 'Dell laptop', id: 5 },
-    ]
+    const { product, addToCart } = props
     return (
         <div className='col-md-8'>
             <h4>shop</h4>
-            { product.map(pd => <Product product={pd} key={pd.id}></Product>)}
+            { product.map(pd => <Product addToCart={addToCart} product={pd} key={pd.id}></Product>)}
         </div>
     );
 };
@@ -29,6 +23,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
     addToCart: addToCart
 }
+
 // const connectToStore = connect(
 //     mapStateToProps,
 //     mapDispatchToProps

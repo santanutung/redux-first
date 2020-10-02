@@ -66,4 +66,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
 # redux-first
+
+git remote add origin https://github.com/santanutung/redux-first.git
+git branch -M main
+git push -u origin main

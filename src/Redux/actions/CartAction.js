@@ -3,7 +3,8 @@ export const REMOVE_From_CART = 'REMOVE_From_CART';
 
 
 export const addToCart = (id) => {
-    return { type: ADD_TO_CART, id }
+
+    return { type: ADD_TO_CART, id };
 }
 
 export const RemoveFromCart = (id) => {
